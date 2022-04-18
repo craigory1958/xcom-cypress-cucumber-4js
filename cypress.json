@@ -1,0 +1,6 @@
+{
+    "testFiles": [
+        "**/*.{feature,features}",
+        "**/*.spec.{js,ts}"
+    ]
+}

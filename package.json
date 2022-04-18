@@ -1,0 +1,28 @@
+{
+    "name": "xcom-cypress-cucumber-utilities-4js",
+    "version": "1.0.0",
+    "description": "Cypress/Cucumber Utilities for JavaScript",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/craigory1958/xcom-cypress-cucumber-utilities-4js.git"
+    },
+    "keywords": [],
+    "author": "Craig Gregory",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/craigory1958/xcom-cypress-cucumber-utilities-4js/issues"
+    },
+    "homepage": "https://github.com/craigory1958/xcom-cypress-cucumber-utilities-4js#readme",
+    "devDependencies": {
+        "cypress": "^9.5.4",
+        "cypress-cucumber-preprocessor": "^4.3.1"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": false
+    },
+    "scripts": {
+        "test": "cypress run",
+        "cypress": "cypress open"
+    }
+}
