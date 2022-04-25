@@ -10,12 +10,11 @@ Given('I open a Google page', () => {
 });
 
 
-When('I enter {string} in the search box', search => {
+When('I enter {string} in the search box', (search) => {
   cy.get('input[name="q"]').type(search + '{enter}');
 });
 
 
-Then('I see {string} in the results', results => {
+Then('I see {string} in the results', (results) => {
   cy.title().should("include", results);
 });
-

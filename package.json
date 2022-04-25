@@ -22,7 +22,8 @@
         "nonGlobalStepDefinitions": false
     },
     "scripts": {
-        "test": "cypress run",
-        "cypress": "cypress open"
+        "cypress": "cypress open",
+        "smoke-tests": "cypress run --spec cypress/integration/smoke-tests/**/",
+        "test": "cypress run --spec cypress/integration/utilities-4js/**/"
     }
 }

@@ -4,8 +4,7 @@ Cypress/Cucumber Utilities for JavaScript
 
 Utilties and tools for automated integration testing of applications with Cypress/Cucumber.  For example, common Cucumber step definitions to logon, and manipulate basic HTML form widgets.
 
-This README.md describes how to setup a project to for testing and create the dependency to 'xcom-cypress-cucumber-utilities-4js'.  Assumptions are that the appropriate GitHub repository 
-and Cypress.io project have been created for the system under test.
+(For instructions on how to setup a project for testing and creating the dependency to 'xcom-cypress-cucumber-utilities-4js', refer to the 'xcom-cypress-cucumber-sandbox' project. )
 
 <br/>
 
@@ -14,14 +13,14 @@ and Cypress.io project have been created for the system under test.
 # Setup workstation
 
 * If this is the first JavaScript/Node.js project ...
-* * Install Node.js ...
-* * Install Git ...
+    * Install Node.js ...
+    * Install Git ...
 
 <br>
 
 * If this is the first Visual Studio Code (VS Code) project ...
-* * Install VS Code ...
-* * install 'Cucumber (Gherkin) Full Support' extension ...
+    * Install VS Code ...
+    * install 'Cucumber (Gherkin) Full Support' extension ...
 
 
 ## Setup project
@@ -41,6 +40,18 @@ and Cypress.io project have been created for the system under test.
 
 ```
 > npm init --yes
+```
+
+* Edit **.gitignore** ...
+
+```
+...
+
+# Cypress
+cypress/screenshots
+cypress/videos
+
+...
 ```
 
 
@@ -88,8 +99,7 @@ and Cypress.io project have been created for the system under test.
 ```
 ...
 "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "step_definitions": "cypress/support/step_definitions"
+    "nonGlobalStepDefinitions": false
 }
 ...
 ```
@@ -105,51 +115,9 @@ module.exports = (on, config) => {
 ```
 
 
-## Setup xcom-cypress-cucumber-common-4js Dependency
-
-```
-> npm install --save-dev https://github.com/GITHUB_USERNAME/xcom-cypress-cucumber-common-4js
-```
-
-* Edit **package.json** ...
-
-```
-...
-"cypress-cucumber-preprocessor": {
-    ...
-    "nonGlobalStepBaseDir": "node_modules/xcom-cypress-cucumber-common-4js/cypress/support/step_definitions"
-    ...
-}
-...
-```
-
-
-## Setup Cypress.io Dashboard
-
-* Edit **package.json** ...
-
-```
-...
-"scripts": {
-    ...
-    "test-record": "cypress run --record --key CYPRESS_DASHBOARD_KEY"
-    ...
-}
-...
-```
-
-* Edit **cypress.json** ...
-
-```
-...
-"projectId": "CYPRESS_DASHBOARD_PROJECT_ID",
-...
-
-```
-
 
 ## Verify Project Setup
 
 ```
-> npm run test-record
+> npm run test
 ```
