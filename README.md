@@ -107,11 +107,19 @@ cypress/videos
 * Edit cypress/plugins/**index.js** ...
 
 ```
+...
+/// <reference types="cypress" />
+
+/**
+ * @type {Cypress.PluginConfig}
+ */
+
 const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = (on, config) => {
     on('file:preprocessor', cucumber())
 }
+...
 ```
 
 
@@ -119,5 +127,5 @@ module.exports = (on, config) => {
 ## Verify Project Setup
 
 ```
-> npm run test
+> npm run smoke-tests
 ```

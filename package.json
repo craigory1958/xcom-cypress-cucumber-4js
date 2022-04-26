@@ -24,6 +24,7 @@
     "scripts": {
         "cypress": "cypress open",
         "smoke-tests": "cypress run --spec cypress/integration/smoke-tests/**/",
+        "test-record": "cypress run --record --key a603854b-8304-4726-bfbb-7835a286f7c7 --spec cypress/integration/utilities-4js/**/",
         "test": "cypress run --spec cypress/integration/utilities-4js/**/"
     }
 }
