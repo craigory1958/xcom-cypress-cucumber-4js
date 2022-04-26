@@ -7,12 +7,12 @@ describe('Cypress Verification Test', () => {
     });
 
 
-    it('search for `Florida MMIS`', () => {
-        cy.get('input[name="q"]').type('Florida MMIS{enter}');
+    it('search for "swiss cheese"', () => {
+        cy.get('input[name="q"]').type('swiss cheese{enter}');
     });
 
 
     it('check results', () => {
-        cy.title().should('include', 'Florida MMIS');
+        cy.title().should('include', 'swiss cheese');
     });
 });

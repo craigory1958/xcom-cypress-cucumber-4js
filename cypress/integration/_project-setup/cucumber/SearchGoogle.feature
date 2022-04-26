@@ -2,9 +2,9 @@
 
 Feature: Cucumber/Gherkin Verification Test
 
-  I want to open Google and search for 'Florida MMIS'
+  I want to open Google and search for 'swiss cheese'
 
   Scenario: Opening Google and searching
     Given I open a Google page
-    When I enter 'Florida MMIS' in the search box
-    Then I see "Florida MMIS" in the results
+    When I enter 'swiss cheese' in the search box
+    Then I see "swiss cheese" in the results
