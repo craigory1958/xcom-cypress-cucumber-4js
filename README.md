@@ -3,6 +3,7 @@
 Cypress/Cucumber Utilities for JavaScript
 
 Utilties and tools for automated integration testing of applications with Cypress/Cucumber.  For example, common Cucumber step definitions to logon, and manipulate basic HTML form widgets.
+  Assumptions are that the appropriate GitHub repository and Cypress.io project have been created for the system under test.
 
 (For instructions on how to setup a project for testing and creating the dependency to 'xcom-cypress-cucumber-utilities-4js', refer to the 'xcom-cypress-cucumber-sandbox' project. )
 
@@ -66,8 +67,9 @@ cypress/videos
 ```
 ...
 "scripts": {
-    "test": "cypress run",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "test-setup": "cypress run --spec cypress/integration/_project-setup/**",
+    "test": "cypress run --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
 }
 ...
 ```
@@ -123,9 +125,32 @@ module.exports = (on, config) => {
 ```
 
 
+## Setup Cypress.io Dashboard
+
+* Edit **cypress.json** ...
+
+```
+...
+"projectId": "CYPRESS_DASHBOARD_PROJECT_ID",
+...
+```
+
+* Edit **package.json** ...
+
+```
+...
+"scripts": {
+    ...
+    "test-record": "cypress run --record --key CYPRESS_DASHBOARD_KEY --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
+    ...
+}
+...
+```
+
+
 
 ## Verify Project Setup
 
 ```
-> npm run smoke-tests
+> npm run test-setup
 ```
