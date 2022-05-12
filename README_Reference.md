@@ -1,6 +1,6 @@
 
 
-| <h3>[Overview](README.md)</h3> | <h3>[Setup](README_Setup.md)</h3> | <h2>[Reference](README_Reference.md)</h2> |
+| [Overview](README.md) | [Setup](README_Setup.md) | <b>[Reference](README_Reference.md)</b> |
 |---|---|---|
 
 <table style="border: none;">
@@ -8,7 +8,7 @@
     <tr>
         <td><a href="README.md">Overview</a></td>
         <td><a href="README_Setup.md">Setup</a></td>
-        <td><a href="README_Reference.md">Reference</a></td>
+        <td><a href="README_Reference.md"><b>Reference</b></a></td>
     </tr>
     </tbody>
 </table>
