@@ -20,8 +20,6 @@
 
 ## Setup project
 
-<br/>
-
 * Clone Git repository ...
 
 * Open terminal session in VS Code ...
