@@ -104,5 +104,6 @@ dist
 .tern-port
 
 # Cypress
+cypress.*.json
 cypress/screenshots
 cypress/videos

@@ -1,8 +1,5 @@
 
 
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-
-
 const url = "https://google.com";
 
 Given('I open a Google page', () => {
@@ -16,5 +13,5 @@ When('I enter {string} in the search box', (search) => {
 
 
 Then('I see {string} in the results', (results) => {
-  cy.title().should("include", results);
+  cy.title().should('include', results);
 });

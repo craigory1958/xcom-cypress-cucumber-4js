@@ -1,17 +1,15 @@
 
 
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-
-
 When('the user presses the {string} key', (key) => {
-    keyPress(key);
+    pressKey(key);
 });
+
 
 And('the user presses the {string} key', (key) => {
-    keyPress(key);
+    pressKey(key);
 });
 
-function keyPress(key) {
-    cy.focused().type('{' + key + '}');
-    return;
+
+function pressKey(key) {
+    cy.focused().type(key);
 };

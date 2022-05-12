@@ -1,3 +1,8 @@
+
+
+| <h2>Overview</h2> | <h3>Setup</h3> | <h3>Reference</h3> |
+|---|---|---|
+
 # xcom-cypress-cucumber-utilities-4js
 
 Cypress/Cucumber Utilities for JavaScript
@@ -5,7 +10,7 @@ Cypress/Cucumber Utilities for JavaScript
 Utilties and tools for automated integration testing of applications with Cypress/Cucumber.  For example, common Cucumber step definitions to logon, and manipulate basic HTML form widgets.
   Assumptions are that the appropriate GitHub repository and Cypress.io project have been created for the system under test.
 
-(For instructions on how to setup a project for testing and creating the dependency to 'xcom-cypress-cucumber-utilities-4js', refer to the 'xcom-cypress-cucumber-sandbox' project. )
+(For instructions on how to setup a project testing for and creating the dependency to 'xcom-cypress-cucumber-utilities-4js', refer to the 'xcom-cypress-cucumber-sandbox' project. )
 
 <br/>
 
@@ -47,11 +52,10 @@ Utilties and tools for automated integration testing of applications with Cypres
 
 ```
 ...
-
 # Cypress
+cypress.env.json
 cypress/screenshots
 cypress/videos
-
 ...
 ```
 
@@ -64,7 +68,7 @@ cypress/videos
 
 * Edit **package.json** ...
 
-```
+```json
 ...
 "scripts": {
     "cypress": "cypress open",
@@ -85,9 +89,22 @@ cypress/videos
 > npm install --save-dev cypress-cucumber-preprocessor
 ```
 
+
+* Edit **.cypress-cucumber-preprocessorrc.json** ...
+
+```json
+...
+{
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": false
+    }
+}
+...
+```
+
 * Edit **cypress.json** ...
 
-```
+```json
 ...
 "testFiles": [
     "**/*.{feature,features}",
@@ -96,19 +113,9 @@ cypress/videos
 ...
 ```
 
-* Edit **package.json** ...
-
-```
-...
-"cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false
-}
-...
-```
-
 * Edit cypress/plugins/**index.js** ...
 
-```
+```js
 ...
 /// <reference types="cypress" />
 
@@ -129,7 +136,7 @@ module.exports = (on, config) => {
 
 * Edit **cypress.json** ...
 
-```
+```json
 ...
 "projectId": "CYPRESS_DASHBOARD_PROJECT_ID",
 ...
@@ -137,7 +144,7 @@ module.exports = (on, config) => {
 
 * Edit **package.json** ...
 
-```
+```json
 ...
 "scripts": {
     ...

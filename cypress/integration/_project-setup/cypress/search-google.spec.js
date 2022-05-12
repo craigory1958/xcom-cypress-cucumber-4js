@@ -7,7 +7,7 @@ describe('Cypress Verification Test', () => {
     });
 
 
-    it('search for "swiss cheese"', () => {
+    it('search for `swiss cheese`', () => {
         cy.get('input[name="q"]').type('swiss cheese{enter}');
     });
 

@@ -7,4 +7,4 @@ Feature: Cucumber/Gherkin Verification Test
   Scenario: Opening Google and searching
     Given I open a Google page
     When I enter 'swiss cheese' in the search box
-    Then I see "swiss cheese" in the results
+    Then I see 'swiss cheese' in the results
