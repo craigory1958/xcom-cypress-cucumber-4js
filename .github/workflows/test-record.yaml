@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
-          repo-mappings: github.com/craigory1958/xcom-cypress-cucumber-utilities-4js
+          repo-mappings: github.com/craigory1958/xcom-cypress-cucumber-preprocessor
 
       - name: Cypress
         uses: cypress-io/github-action@v2
