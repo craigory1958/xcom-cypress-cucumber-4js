@@ -72,38 +72,29 @@ cypress/videos
 > npm run cypress
 ```
 
-## Setup Cucumber/Gherkin
+### Setup Cucumber/Gherkin
 
 ```
-> npm install --save-dev cypress-cucumber-preprocessor
+
+> npm install --save-dev https://github.com/GITHUB_ORGANIZATION/xcom-cypress-cucumber-preprocessor
+
 ```
-
-
-* Edit **.cypress-cucumber-preprocessorrc.json** ...
-
-```json
-...
-{
-    "nonGlobalStepDefinitions": false
-}
-...
-```
-
 * Edit **cypress.json** ...
 
 ```json
 ...
+
 "testFiles": [
     "**/*.{feature,features}",
     "**/*.spec.{js,ts}"
-]
+],
 ...
 ```
 
 * Edit cypress/plugins/**index.js** ...
 
 ```js
-...
+
 /// <reference types="cypress" />
 
 /**
@@ -115,7 +106,7 @@ const cucumber = require('cypress-cucumber-preprocessor').default
 module.exports = (on, config) => {
     on('file:preprocessor', cucumber())
 }
-...
+
 ```
 
 
@@ -125,7 +116,7 @@ module.exports = (on, config) => {
 
 ```json
 ...
-"projectId": "CYPRESS_DASHBOARD_PROJECT_ID",
+"projectId": "CYPRESS_PROJECT_ID",
 ...
 ```
 
@@ -135,7 +126,7 @@ module.exports = (on, config) => {
 ...
 "scripts": {
     ...
-    "test-record": "cypress run --record --key CYPRESS_DASHBOARD_KEY --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
+    "test-record": "cypress run --record --key CYPRESS_RECORD_KEY --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
     ...
 }
 ...

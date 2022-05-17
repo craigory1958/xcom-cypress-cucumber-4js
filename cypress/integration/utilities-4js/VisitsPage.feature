@@ -6,6 +6,6 @@ Feature: Verify Visits Page
 
   Scenario: Opening Google and searching
     Given the user navagates to 'https://www.google.com/'
-    When the user enters 'swiss cheese' into the 'input[title="Search"]' field
+    When the user enters '${query}' into the 'input[title="Search"]' field
     And the user presses the '{enter}' key
-    Then the user sees the 'swiss cheese' page
+    Then the user sees the '${query}' page
