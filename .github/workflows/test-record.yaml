@@ -12,15 +12,24 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
-          repo-mappings: github.com/craigory1958/xcom-cypress-cucumber-preprocessor
 
-      - name: Cypress
+      - name: Cypress Install
         uses: cypress-io/github-action@v2
         with:
+          runTests: false
+
+      - name: Hack cypress-cucumber-preprocessor
+        run: cp .misc/setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
+
+      - name: Decrypt cypress.env.json File
+        run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .misc/cypress.env.json.gpg
+
+      - name: Cypress Tests
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
           record: true
+          browser: chrome
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          CYPRESS_TEST_CONFIGURATION: ${{ secrets.TEST_CONFIGURATION }}

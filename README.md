@@ -1,6 +1,6 @@
 
 
-| <h2>[Overview](README.md)</h2> | <h3>[Setup](README_Setup.md)</h3> | <h3>[Reference](README_Reference.md)</h3> |
+| <h2>[Overview](README.md)</h2> | <h3>[Setup](.misc/readme/README_Setup.md)</h3> | <h3>[Reference](.misc/readme/README_Reference.md)</h3> |
 |---|---|---|
 
 

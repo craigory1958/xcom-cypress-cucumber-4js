@@ -2,7 +2,7 @@
 
 Feature: Verify Visits Page
 
-  I want to open Google and search for 'swiss cheese'
+  I want to open Google and search
 
   Scenario: Opening Google and searching
     Given the user navagates to 'https://www.google.com/'

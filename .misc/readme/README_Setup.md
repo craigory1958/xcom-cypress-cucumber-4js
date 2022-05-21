@@ -37,22 +37,23 @@
 > npm init --yes
 ```
 
+* Edit **.gitignore** ...
+
+```
+
+*.secret
+cypress.*.json
+cypress/screenshots
+cypress/videos
+node_modules/
+
+```
+
 
 ## Setup Cypress
 
 ```
 > npm install --save-dev cypress
-```
-
-* Edit **.gitignore** ...
-
-```
-...
-# Cypress
-cypress.env.json
-cypress/screenshots
-cypress/videos
-...
 ```
 
 * Edit **package.json** ...
@@ -67,7 +68,7 @@ cypress/videos
 ...
 ```
 
-* Initialize Cypress ...
+* Initialize Cypress ... (Delete files option)
 ```
 > npm run cypress
 ```
@@ -76,7 +77,11 @@ cypress/videos
 
 ```
 
-> npm install --save-dev https://github.com/GITHUB_ORGANIZATION/xcom-cypress-cucumber-preprocessor
+> npm install --save-dev cypress-cucumber-preprocessor
+
+> copy .misc\setup\getStepDefinitionsPaths.js node_modules\cypress-cucumber-preprocessor\lib
+
+```
 
 ```
 * Edit **cypress.json** ...
@@ -87,7 +92,7 @@ cypress/videos
 "testFiles": [
     "**/*.{feature,features}",
     "**/*.spec.{js,ts}"
-],
+]
 ...
 ```
 
@@ -126,7 +131,7 @@ module.exports = (on, config) => {
 ...
 "scripts": {
     ...
-    "test-record": "cypress run --record --key CYPRESS_RECORD_KEY --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
+    "test-record": "cypress run --record --key CYPRESS_RECORD_KEY --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**",
     ...
 }
 ...
