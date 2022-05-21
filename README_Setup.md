@@ -86,7 +86,7 @@ node_modules/
 
 ```
 
-```
+
 * Edit **cypress.json** ...
 
 ```json
