@@ -82,7 +82,7 @@ node_modules/
 
 > npm install --save-dev cypress-cucumber-preprocessor
 
-> copy .misc\setup\getStepDefinitionsPaths.js node_modules\cypress-cucumber-preprocessor\lib
+> copy .encryption\setup\getStepDefinitionsPaths.js node_modules\cypress-cucumber-preprocessor\lib
 
 ```
 

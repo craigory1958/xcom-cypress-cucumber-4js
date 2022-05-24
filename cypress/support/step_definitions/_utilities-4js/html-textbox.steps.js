@@ -29,10 +29,5 @@ And('the user enters {string} into the {string} field very slowly', (value, fiel
 
 function enterFieldData(field, value, delay) {
 
-    const matched = /\${(.*)}/g.exec(value);
-
-    if (matched)
-        value = eval("Cypress.env('TEST_CONFIGURATION')." + matched[1]);
-
-    cy.get(field).type(value, { delay: delay });
+    cy.get(field).type(cy.dynamicData.getDataValue(value, Cypress.env('TEST_CONFIGURATION')), { delay: delay });
 }
