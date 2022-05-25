@@ -20,8 +20,8 @@
     },
     "scripts": {
         "cypress": "cypress open",
-        "test-record": "cypress run --record --key a603854b-8304-4726-bfbb-7835a286f7c7 --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**",
+        "test-record": "cypress run --record --key a603854b-8304-4726-bfbb-7835a286f7c7 --spec cypress/integration/{*,!(_)*/**}",
         "test-setup": "cypress run --spec cypress/integration/_project-setup/**",
-        "test": "cypress run --spec cypress/integration/[abcdefghijklmnopqrstuvwxyz0123456789]*/**"
+        "test": "cypress run --spec cypress/integration/{*,!(_)*/**}"
     }
 }
