@@ -39,6 +39,7 @@
 * Initialize/build project ...
 
 ```
+> npm cache clear --force
 
 > npm install
 

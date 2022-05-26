@@ -3,6 +3,7 @@
 function plugins(on, config) {
 
     on('task', {
+
         csvToJson(data) {
 
             var lines = data.split("\n");
@@ -14,7 +15,7 @@ function plugins(on, config) {
                 var line = lines[i].split(",");
 
                 for (var j = 0; j < headers.length; j++)
-                    obj[headers[j]] = line[j];
+                    obj[headers[j].trim()] = line[j].trim();
 
                 result.push(obj);
             }
