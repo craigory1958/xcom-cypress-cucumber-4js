@@ -22,7 +22,7 @@ jobs:
         run: cp .setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
 
       - name: Decrypt cypress.env.json File
-        run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .encryption/cypress.env.json.gpg
+        run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v2

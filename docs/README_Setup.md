@@ -2,7 +2,7 @@
 
 # <sub>[Overview](README.md)</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup](README_Setup.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[Reference](README_Reference.md)</sub>
 
-## Cypress/Cucumber Utilities for JavaScript (xcom-cypress-cucumber-utilities-4js)
+## Cypress/Cucumber Utilities for JavaScript (cc4js)
 
 <br/>
 
@@ -21,7 +21,7 @@
 
 <br>
 
-## Setup project
+## Setup Project
 
 * Clone Git repository ...
 
@@ -39,6 +39,7 @@
 * Initialize/build project ...
 
 ```
+
 > npm cache clear --force
 
 > npm install
@@ -66,13 +67,13 @@
 ```
 
 
-### Restore Secret Files 
+### Restore Protected Files 
 
 ```
 
-> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .encryption/cypress.env.json.gpg
+> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
 
-> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .encryption/cypress/fixtures/search-google-vcsv.csv.gpg
+> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .protected/cypress/fixtures/search-google-vcsv.csv.gpg
 
 ```
 
