@@ -2,4 +2,4 @@
 
 import './commands'
 
-import './functions/dynamic-data'
+import './functions/cc4js-dynamic-data'
