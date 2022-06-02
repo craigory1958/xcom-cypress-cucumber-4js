@@ -1,5 +1,5 @@
 {
     "nonGlobalStepDefinitions": true,
     "xcom_projectStepDefinitions": "cypress/support/step_definitions",
-    "xcom_utils4jsStepDefinitions": "node_modules/xcom-cypress-cucumber-utilities-4js/cypress/support/step_definitions"
+    "xcom_utils4jsStepDefinitions": "node_modules/xcom-cypress-cucumber-4js/cypress/support/step_definitions"
 }

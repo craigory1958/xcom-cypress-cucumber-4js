@@ -2,7 +2,7 @@
 
 # <sub>[Overview](README.md)</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup](README_Setup.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[Reference](README_Reference.md)</sub>
 
-## Cypress/Cucumber Utilities for JavaScript (cc4js)
+## Cypress/Cucumber for JavaScript (cc4js)
 
 <br/>
 
@@ -21,6 +21,12 @@
 
 <br>
 
+* Also needed if this is the first project ...
+    * GnuPG ...
+
+<br>
+
+
 ## Setup Project
 
 * Clone Git repository ...
@@ -32,6 +38,7 @@
 ```
 
 > git config --global user.name "FIRST_NAME LAST_NAME"
+
 > git config --global user.email "EMAIL@EXAMPLE.COM"
 
 ```
