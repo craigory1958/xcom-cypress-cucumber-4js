@@ -27,6 +27,7 @@ jobs:
       - name: Cypress Tests
         uses: cypress-io/github-action@v2
         with:
+          config-file: cypress.config.js
           install: false
           record: true
           browser: chrome
