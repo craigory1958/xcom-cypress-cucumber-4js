@@ -27,7 +27,7 @@
 <br>
 
 
-## Setup Project
+## Project Setup
 
 * Clone Git repository ...
 
