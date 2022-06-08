@@ -25,7 +25,7 @@ jobs:
         run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
 
       - name: Decrypt arch-google-csv.csv File
-        run: mkdir cypress/fixtures | gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .protected/cypress/fixtures/search-google-vcsv.csv.gpg
+        run: mkdir cypress/fixtures | gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .protected/cypress/fixtures/search-google-csv.csv.gpg
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v2
