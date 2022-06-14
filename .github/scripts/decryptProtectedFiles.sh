@@ -7,7 +7,7 @@ for src in "$1"/*
 do
     if [ ! -d "${src}" ] ; then
         echo "${src} is a file"
-        dst=${src:${#${1}}+1}
+        dst=${src:${#$1}+1}
         echo "${dst}"
          # gpg --decrypt --passphrase "$(1)" --batch -o "${x}" "${src}"
     else
