@@ -3,7 +3,7 @@
 # Recursively travel a directory and decrypt files
 
 function traverse() {
-    for src in .protected/.protected/*
+    for src in ".protected/.protected/*"
     do
         if [ ! -d "${src}" ] ; then
             echo "${src} is a file"
