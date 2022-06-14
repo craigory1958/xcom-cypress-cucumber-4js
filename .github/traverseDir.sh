@@ -7,8 +7,8 @@ for file in "$2"/*
 do
     if [ ! -d "${file}" ] ; then
         echo "${file} is a file"
-        x = ${"${file}":21}
-        echo "${x} - ${file}"
+        # x = ${"${file}":21}
+        echo "${${file}:21} - ${file}"
         # gpg --decrypt --passphrase "$(1)" --batch -o "${x}" "${file}"
     else
         traverseDir "${file}"
