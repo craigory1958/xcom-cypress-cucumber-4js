@@ -22,7 +22,7 @@ jobs:
       #   run: cp .setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
 
       - name: Moving build to artifacts directory
-        run: ls | .github/traverseDir.sh .protected/.protected
+        run: .github/traverseDir.sh .protected/.protected
 
       # - name: Decrypt cypress.env.json File
       #   run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
