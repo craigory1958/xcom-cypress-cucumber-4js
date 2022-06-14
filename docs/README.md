@@ -1,6 +1,6 @@
 
 
-# [Overview](README.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sub>[Setup](README_Setup.md)</sub> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <sub>[Reference](README_Reference.md)</sub>
+# [Overview](README.md) &nbsp;&nbsp; <sub>[Setup](README_Setup.md)</sub> &nbsp;&nbsp; <sub>[Reference](README_Reference.md)</sub>
 
 ## Cypress/Cucumber for JavaScript (cc4js)
 

@@ -1,7 +1,0 @@
-
-*.secret
-cypress.*.json
-cypress/fixtures
-cypress/screenshots
-cypress/videos
-node_modules/

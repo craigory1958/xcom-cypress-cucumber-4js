@@ -1,6 +1,6 @@
 
 
-# <sub>[Overview](README.md)</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Setup](README_Setup.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>[Reference](README_Reference.md)</sub>
+# <sub>[Overview](README.md)</sub>&nbsp;&nbsp;[Setup](README_Setup.md)&nbsp;&nbsp;<sub>[Reference](README_Reference.md)</sub>
 
 ## Cypress/Cucumber for JavaScript (cc4js)
 
@@ -54,20 +54,9 @@
 ```
 
 
-### Update cypress 
+### Hack cypress-cucumber-preprocessor 
 
 ```
-
-> npm install cypress
-
-```
-
-
-### Update cypress-cucumber-preprocessor 
-
-```
-
-> npm install cypress-cucumber-preprocessor
 
 > copy .setup\getStepDefinitionsPaths.js node_modules\cypress-cucumber-preprocessor\lib
 
@@ -78,9 +67,9 @@
 
 ```
 
-> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
+> gpg --decrypt --passphrase GPG_PASSPHRASE --batch -o cypress.env.json .protected\.protected\cypress.env.json.gpg
 
-> gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .protected/cypress/fixtures/search-google-vcsv.csv.gpg
+> gpg --decrypt --passphrase GPG_PASSPHRASE --batch -o cypress\fixtures\search-google-csv.csv .protected\.protected\cypress\fixtures\search-google-vcsv.csv.gpg
 
 ```
 
