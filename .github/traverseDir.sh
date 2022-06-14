@@ -3,19 +3,21 @@
 #script to recursively travel a dir of n levels
 
 function traverseDir() {
-for file in "$1"/*
+for file in "$2"/*
 do
     if [ ! -d "${file}" ] ; then
         echo "${file} is a file"
+        x = ${"${file}":21:-4}
+        echo "${x} - ${file}"
+        # gpg --decrypt --passphrase "$(1)" --batch -o "${x}" "${file}"
     else
-        echo "entering recursion with: ${file}"
         traverseDir "${file}"
     fi
 done
 }
 
 function main() {
-    traverseDir "$1"
+    traverseDir "$1" "$2"
 }
 
-main "$1"
+main "$1" "$2"

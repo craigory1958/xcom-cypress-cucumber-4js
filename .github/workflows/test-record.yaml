@@ -28,7 +28,7 @@ jobs:
         run: ls -la .github/traverseDir.sh
 
       - name: Decrypt .protected files
-        run: .github/traverseDir.sh .protected/.protected
+        run: .github/traverseDir.sh ${{ secrets.GPG_PASSPHRASE }} .protected/.protected 
 
       # - name: Decrypt cypress.env.json File
       #   run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
