@@ -7,7 +7,7 @@ for file in "$2"/*
 do
     if [ ! -d "${file}" ] ; then
         echo "${file} is a file"
-        x = ${"${file}":21:-4}
+        x = ${"${file}":21}
         echo "${x} - ${file}"
         # gpg --decrypt --passphrase "$(1)" --batch -o "${x}" "${file}"
     else
