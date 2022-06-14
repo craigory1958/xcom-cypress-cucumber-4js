@@ -9,7 +9,7 @@ function traverse() {
             echo "${src} is a file"
             dst=${src:22:-4}
             echo "${dst}"
-            gpg --decrypt --passphrase "$1" --batch -o "${dst}" "${src}"
+            gpg --decrypt --passphrase "$GPG_PASSPHRASE" --batch -o "${dst}" "${src}"
         else
             traverse "${src}"
         fi
@@ -17,7 +17,7 @@ function traverse() {
 }
 
 function main() {
-    traverse ".protected/.protected"
+    traverse "$1"
 }
 
 main "$1"

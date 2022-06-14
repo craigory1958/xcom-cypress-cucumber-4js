@@ -4,6 +4,9 @@ name: Test w/Dashboard Recording
 
 on: [workflow_dispatch]
 
+env:
+  GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -25,7 +28,7 @@ jobs:
         run: chmod +x .github/scripts/decryptProtectedFiles.sh
 
       - name: Decrypt .protected files
-        run: .github/scripts/decryptProtectedFiles.sh ${{ secrets.GPG_PASSPHRASE }} 
+        run: .github/scripts/decryptProtectedFiles.sh ".protected/.protected"
 
       # - name: Decrypt cypress.env.json File
       #   run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
