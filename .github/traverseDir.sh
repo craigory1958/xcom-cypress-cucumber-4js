@@ -3,7 +3,7 @@
 #script to recursively travel a dir of n levels
 
 function traverseDir() {
-for file in "$2"/*
+for file in "$1"/*
 do
     if [ ! -d "${file}" ] ; then
         echo "${file} is a file"
@@ -17,7 +17,7 @@ done
 }
 
 function main() {
-    traverseDir "$1" "$2"
+    traverseDir "$1"
 }
 
-main "$1" "$2"
+main "$1"
