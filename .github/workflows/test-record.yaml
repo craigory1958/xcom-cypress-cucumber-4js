@@ -13,13 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress Install
-        uses: cypress-io/github-action@v2
-        with:
-          runTests: false
+      # - name: Cypress Install
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     runTests: false
 
-      - name: Hack cypress-cucumber-preprocessor
-        run: cp .setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
+      # - name: Hack cypress-cucumber-preprocessor
+      #   run: cp .setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
 
       - name: Moving build to artifacts directory
         run: ls | .github/traverseDir.sh .protected/.protected
