@@ -21,19 +21,13 @@ jobs:
       - name: Hack cypress-cucumber-preprocessor
         run: cp .setup/getStepDefinitionsPaths.js node_modules/cypress-cucumber-preprocessor/lib/getStepDefinitionsPaths.js
 
-      - name: Enable decryption script
-        run: chmod +x .github/scripts/decryptProtectedFiles.sh
+      - name: Enable .github scripts
+        run: chmod +x .github/scripts/*.sh
 
       - name: Decrypt .protected files
         run: .github/scripts/decryptProtectedFiles.sh ".protected/.protected"
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-
-      # - name: Decrypt cypress.env.json File
-      #   run: gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress.env.json .protected/cypress.env.json.gpg
-
-      # - name: Decrypt arch-google-csv.csv File
-      #   run: mkdir cypress/fixtures | gpg --decrypt --passphrase ${{ secrets.GPG_PASSPHRASE }} --batch -o cypress/fixtures/search-google-csv.csv .protected/cypress/fixtures/search-google-csv.csv.gpg
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v2
