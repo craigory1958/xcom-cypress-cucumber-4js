@@ -63,7 +63,7 @@
 ```
 
 
-### Restore Protected Files 
+## Decrypt .protected files 
 
 ```
 
@@ -74,7 +74,7 @@
 ```
 
 
-## Verify Project Setup
+## Setup and run project verification tests (optional) 
 
 ```
 

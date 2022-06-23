@@ -19,7 +19,7 @@
         "cypress-cucumber-preprocessor": "^4.3.1"
     },
     "scripts": {
-        "cypress": "cypress open",
+        "cypress": "cypress open --e2e -b chrome",
         "test-record": "cypress run --record --key a603854b-8304-4726-bfbb-7835a286f7c7 --spec cypress/e2e/{*,!(_)*/**}",
         "test-setup": "cypress run --spec cypress/e2e/_project-setup/**",
         "test": "cypress run --spec cypress/e2e/{*,!(_)*/**}"
