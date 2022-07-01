@@ -9,7 +9,7 @@ describe('CSV Verification Test', () => {
 
         cy.readFile('cypress/fixtures/search-google-csv.csv')
             .then((csv) => {
-                cy.task('csvToJson', csv).then((json) => {
+                cy.task('CsvToJson', csv).then((json) => {
                     csvData = json;
                 });
             });
