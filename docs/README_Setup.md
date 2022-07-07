@@ -1,6 +1,6 @@
 
 
-## <sub>[Overview](README.md)</sub>&nbsp;&nbsp;[Setup](README_Setup.md)&nbsp;&nbsp;<sub>[Reference](README_Reference.md)</sub>
+## [Overview](README.md)&nbsp;&nbsp;[**Setup**](README_Setup.md)&nbsp;&nbsp;[Reference](README_Reference.md)
 
 ---
 
